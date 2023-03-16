@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/7fdb3a4ca0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Lobby CRE Live Product Demo | Lobby CRE</title>
+    <style>
+      /* Font Import */
+
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+      /* Pre Styles */
+
+      :root {
+        /* font-size: ; */
+        font-size: calc(62.5% + 0.350625vw);
+        /* font-family */
+        font-family: "Fira Sans", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+        /* additional styles */
+
+      
+
+        /* end of additional styles */
+
+      h1 {
+        font-size: 2.9em;
+        color: #003d60;
+      }
+
+      h2 {
+        font-size: 2.3em;
+        color: #003d60;
+      }
+
+      h3 {
+        
+        font-size: 1.2em;
+      }
+      p {
+    font-size: 1.2rem !important;
+}
+
+      a {
+        text-decoration: none;
+        display: block;
+        transition: all 0.5s;
+        color: #3bb4fa;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #007bc2;
+      }
+
+      a,
+      button {
+        cursor: pointer;
+      }
+
+      img {
+        width: 100%;
+      }
+
+
+      .align-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      /* Page Styling */
+
+      section {
+        width: 100%;
+        /* padding: 2vw; */
+      }
+
+     #hero {
+        background: url(https://github.com/thecolinosborne/images/blob/main/8b5SqIK.png?raw=true) ;
+        /* padding: 40px 2vw; */
+        height: 100vh;
+      }
+
+      #hero div {
+        width: 40%;
+        min-width: 400px;
+      }
+
+      #hero .left {
+        /* padding: 3vw 0; */
+        margin-top: -5rem;
+        width: 35%;
+      }
+
+      #hero .left * {
+        margin-block: 1vw;
+      }
+
+      #hero .left h3 {
+        color: blue;
+      }
+      #hero .left img {
+        width: 50%;
+        max-width: 200px;
+      }
+
+      #hero .left h1 {
+        font-weight: 300;
+        color: white;
+        font-size: 32px;
+      }
+
+      #hero .left a {
+  padding: 12px 24px;
+  background-color: #ee6352;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  width: fit-content;
+}
+
+      #hero .right {
+        margin-top: -50px;
+        position: relative;
+        height: 100%;
+      }
+
+      #hero .right img {
+        width: 430px;
+        height: 5   00pxs;
+        z-index: 5;
+        position: relative;
+        /* max-width: 250px; */
+        transform: translateY(80px);
+        margin-left: 6rem;
+        margin-top: 8.5rem;
+      }
+
+      #hero .whitespace {
+        height: calc(3vw + 2rem);
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        /* margin-top: 5vw; */
+      }
+
+      
+
+      #details {
+        padding-top: 3vw ;
+      }
+
+      #details div {
+        width: 35%;
+        padding: 1vw;
+        min-width: 350px;
+      }
+
+      #details .text * {
+        margin-block: 1vw;
+      }
+      #details .text h2{
+        font-size: 30px;
+      }
+      #details .text p{
+        font-size: 22px;
+      }
+
+      #details .form {
+        /*padding-block: 2vw;*/
+      }
+
+      #details .form h1 {
+        margin-bottom: 1vw;
+      }
+
+      #what_you_learn {
+        padding: 3vw 5vw;
+        background-color: #e7e7e7;
+      }
+
+      #what_you_learn h1 {
+        font-weight: 300;
+        text-align: center;
+        color: #2f3e62;
+        margin-block: 1vw;
+        font-size: 3rem;
+      }
+
+      #what_you_learn .flex.wrap {
+        padding: 2vw 1vw;
+        gap: 3%;
+        row-gap: 3rem;
+      }
+
+      #what_you_learn .flex .column {
+        width: 28%;
+        min-width: 300px;
+        /* min-height: 15rem; */
+      }
+
+      #what_you_learn .flex .column .icon {
+        padding-bottom: 2vw;
+        margin-bottom: 2vw;
+        border-bottom: 1px solid black;
+        width: 80%;
+        text-align: center;
+      }
+
+      #what_you_learn .flex .column .icon i {
+        /* width: 50px;
+    height: 50px; */
+        font-size: 2rem;
+        background-color: #003d60;
+        color: white;
+        padding: 2.4rem;
+        border-radius: 100px;
+        text-align: center;
+        margin: auto;
+      }
+
+      #what_you_learn .flex .column p {
+        width: 80%;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      .flex.wrap.justify-center {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+      #additional {
+        padding: 3vw;
+      }
+
+      #additional h2 {
+        width: fit-content;
+        margin: 3rem auto;
+        font-size: 2rem;
+      }
+
+      #additional .flex {
+        gap: 3%;
+        row-gap: 4rem;
+        flex-direction: ;
+      }
+
+      #additional .flex .column {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 280px;
+      }
+
+      #additional .flex .column * {
+        margin-bottom: 1vw;
+      }
+
+      #additional .flex .column img {
+        object-fit: cover;
+        width: 70%;
+        position: relative;
+        left: 35px;
+      }
+
+      #additional .flex .column h3 {
+        color: #003d60;
+        font-size: 1.7rem;
+      }
+      a.button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+      footer {
+        padding: 1vw;
+        background-color: #265472;
+        color: white;
+        font-weight: 300;
+      }
+      footer .flex {
+        width: 80%;
+        margin: auto;
+      }
+      footer .flex .icons {
+        display: flex;
+        gap: 2rem;
+        padding-top: 1em;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="hero" class="flex justify-center align-center wrap">
+        <div class="left">
+          <img
+            src="https://go.thirtycapital.com/l/907982/2022-07-27/46zk8/907982/16589259320SpULThG/lobby_logo_all_white.png"
+            alt="Logo"
+            class="logo"
+          />
+        <div class="text">
+          <h3 style="color: #FBD791;">Live Webinar | Wednesday, March 29th | 2:00 PM ET</h3>
+          <h1>Lobby CRE Live Product Demo</h1>
+        <a href="#form">Watch Live Webinar</a>
+
+        </div>
+        </div>
+        <div class="right">
+          <img
+            src="https://go.thirtycapital.com/l/907982/2023-03-14/cmyc4/907982/1678821578oLFUaCPU/1780facf_14ab_48dd_ad88_b78510e89b9d.jpg"
+            alt="Hero Image"
+            class="translate"
+          />
+        </div>
+      </section>
+      <section id="details" class="flex justify-center wrap">
+        <div class="text">
+  <h2 style="font-size: 36px;">In this Webinar, our panel of experts discuss:</h2>
+           <p> Lobby CRE creates opportunities to 'see around the corner', quickly capturing critical insights that optimize cashflow for faster returns.
+          </p>
+          <p>In this upcoming webinar, our product expert will demonstrate how asset management software can address some of the most significant pain points and challenges you likely face in your role.</p>
+        </div>
+        <div class="form" id="form">
+          <iframe src="https://go.lobbycre.com/l/907982/2023-02-13/cjftv" width="100%" height="700" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+        </div>
+      </section>
+      <section id="what_you_learn">
+  <h1>Join this session to learn about how an all-in-one asset and portfolio management solution can:</h1>
+  <div id="join" class="session flex wrap justify-center">
+    <div class="column flex align-center">
+      <div class="icon">
+        <img src='https://go.thirtycapital.com/l/907982/2023-02-27/cl2xg/907982/1677521597vkznZVrk/200x100_search__4_.png'/>
+      </div>
+      <p>
+        Automate operational and financial data intake
+      </p>
+    </div>
+    <div class="column flex align-center">
+      <div class="icon">
+        <img src='https://go.thirtycapital.com/l/907982/2023-02-27/cl2xc/907982/1677521547yZqMa08U/200x100_search__3_.png'/>
+      </div>
+      <p>
+        Enable intelligent performance analysis and reporting
+      </p>
+    </div>
+    <div class="column flex align-center">
+      <div class="icon">
+        <img src='https://go.thirtycapital.com/l/907982/2023-02-27/cl2xk/907982/1677521640MfqRvUBt/200x100_search__1_.png'/>
+      </div>
+      <p>
+        Model historic, current, and future scenarios
+      </p>
+    </div>
+    <div class="column flex align-center">
+      <div class="icon">
+        <img src='https://go.thirtycapital.com/l/907982/2023-02-27/cl2xk/907982/1677521640MfqRvUBt/200x100_search__1_.png'/>
+      </div>
+      <p>
+        Model historic, current, and future scenarios
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+}
+
+.features h2 {
+    margin-bottom: 1em;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20%;
+    padding-right: 16em;
+    height: 100%;
+}
+
+.images img {
+    width: 15em;
+}
+
+.trusted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+    background: #fff;
+    height: 100%;
+}
+
+.trusted img {
+    width: 50%;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    .resources {
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 1em;
+        margin-left: 1em;
+        gap: 3em;
+    }
+    section#details {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resource.flex.wrap.justify-center{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+    .row {
+        flex-direction: column;
+    }
+
+    .text {
+        padding-top: 10em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .text h1 {
+        font-size: 23.3em;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero .btn {
+        width: 1rem;
+    }
+
+    #hero .right img {
+        right: 7.5em;
+        bottom: 12em;
+        padding: 6em;
+    }
+    
+    .features h2 {
+        font-size: 2em;
+    }
+
+
+    #join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+}
+</style>
+
+<section class="features">
+    <h2>Highlighted Lobby CRE Features</h2>
+    <div class="images">
+        <img src="./assets/cashflow.png" alt="">
+        <img src="./assets/integrated.png" alt="">
+        <img src="./assets/performance.png" alt="">
+        <img src="./assets/pre-built.png" alt="">
+        <img src="./assets/configure.png" alt="">
+        <img src="./assets/standard.png" alt="">
+    </div>
+</section>
+
+<section class="divi">
+    
+</section>
+
+<section class="trusted">
+    <h2>Trusted by Top CRE Friends</h2>
+    <img src="./assets/Lobby_CRE_s_customization_tools_and_features_have_eliminated_unnecessa.png" alt="">
+    <img src="./assets/Screen_Shot_2022_10_19_at_2.20.29_PM__5_.png" alt="" class="">
+</section>
+
+     <section id="additional">
+        <h2>Additional Resources</h2>
+       <div class="resources">
+        <div class="resource flex wrap justify-center">
+            <div class="column">
+              <a href="https://go.lobbycre.com/ebook-buyers-guide-for-asset-management-software"><img
+                src="https://go.thirtycapital.com/l/907982/2023-02-23/ckrbk/907982/1677179662gTomdNOL/Lobby__Landing_Page_Content_Thumbnails.png"
+                alt=""
+                
+              /></a>
+              <p>EBOOK</p>
+              <h3>
+                Buyer's Guide for Asset Management Software
+              </h3>
+              <p>
+                Learn how CRE tech solutions are powering the industry to transition from outdated programs and processes to automated, scalable operations that can boost business efficiencies and drive cashflow
+              </p>
+                <a class="button" href="https://go.lobbycre.com/ebook-buyers-guide-for-asset-management-software">Learn More</a>
+              <style>
+                  .button {
+                  display: inline-block;
+                  background-color: #ee6352;
+                  color: white;
+                  padding: 12px 24px;
+                  border-radius: 30px;
+                  font-size: 1.2rem;
+                  text-decoration: none;
+                  }
+              </style>
+            </div>
+            <div class="column">
+              <a href="https://go.thirtycapital.com/webinar-2023-cre-outlook"><img
+                src="https://go.thirtycapital.com/l/907982/2023-02-23/ckrby/907982/1677179810bcRit78D/3.png"
+                alt=""
+                width="" height=""
+              /></a>
+              <p>WEBINAR</p>
+              <h3>
+                2023 CRE Outlook: The Recalibration of Commercial Real Estate
+              </h3>
+              <p>
+                Learn how to plan for the new year to effectively navigate changes and gain more control over the outcomes of your portfolio
+              </p>
+                <a class="button" href="https://go.thirtycapital.com/webinar-2023-cre-outlook">Learn More</a>
+              <style>
+                  .button {
+                  display: inline-block;
+                  background-color: #ee6352;
+                  color: white;
+                  padding: 12px 24px;
+                  border-radius: 30px;
+                  font-size: 1.2rem;
+                  text-decoration: none;
+                  }
+              </style>
+            </div>
+            <div class="column">
+              <a href="https://go.lobbycre.com/checklist-how-much-time-and-money-can-automation-save-your-cre-firm"> <img
+                src="https://go.thirtycapital.com/l/907982/2023-02-23/ckrbr/907982/1677179737gQiHR41b/2.png"
+                alt=""
+              /></a>
+              <p>CHECKLIST</p>
+              <h3>How Much Time and Money Could Automation Save Your CRE Firm?</h3>
+              <p>
+                Use this checklist to identify four manual tasks that can be automated to save your firm thousands of dollars per year and up to 8 hours each week.
+              </p>
+                <a class="button" href="https://go.lobbycre.com/checklist-how-much-time-and-money-can-automation-save-your-cre-firm">Learn More</a>
+              <style>
+                  .button {
+                  display: inline-block;
+                  background-color: #ee6352;
+                  color: white;
+                  padding: 12px 24px;
+                  border-radius: 30px;
+                  font-size: 1.2rem;
+                  text-decoration: none;
+                  }
+              </style>
+            </div>
+        
+       </div>
+
+
+      </section>
+    </main>
+    <footer>
+      <div class="flex justify-between align-center">
+        <div class="text">
+          <h4>
+            © Copyright 2023 Lobby CRE, LLC. All Rights
+            Reserved.
+          </h4>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

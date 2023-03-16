@@ -1,0 +1,121 @@
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+}
+
+.features h2 {
+    margin-bottom: 1em;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20%;
+    padding-right: 16em;
+    height: 100%;
+}
+
+.images img {
+    width: 15em;
+}
+
+.trusted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+    background: #fff;
+    height: 100%;
+}
+
+.trusted img {
+    width: 50%;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 600px) {
+    .resources {
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+
+    
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 1em;
+        margin-left: 1em;
+        gap: 3em;
+    }
+    section#details {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resource.flex.wrap.justify-center{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+    .row {
+        flex-direction: column;
+    }
+
+    .text {
+        padding-top: 10em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .text h1 {
+        font-size: 23.3em;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero .btn {
+        width: 1rem;
+    }
+
+    #hero .right img {
+        right: 7.5em;
+        bottom: 12em;
+        padding: 6em;
+    }
+    
+    .features h2 {
+        font-size: 2em;
+    }
+
+
+    #join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+}

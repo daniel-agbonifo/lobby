@@ -1,0 +1,94 @@
+.hero {
+    background: url(https://github.com/thecolinosborne/images/blob/main/8b5SqIK.png?raw=true) ;
+        /* padding: 40px 2vw; */
+        height: 80vh;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.logo {
+    width: 10em;
+    position: absolute;
+    top: 10em;
+    left: 8em;
+}
+
+.left {
+    width: 35%;
+    margin-left: 8em;
+    
+}
+
+.right img {
+    width: 24em;
+    position: absolute;
+    top: 10em;
+    right: 15em;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.details .text {
+    width: 30em;
+    
+}
+
+.session {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.session .learn__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#what_you_learn .flex.wrap {
+    padding: 2vw 1vw;
+    gap: 3%;
+    row-gap: 3rem;
+  }
+
+  #what_you_learn .flex .column {
+    width: 28%;
+    min-width: 300px;
+    /* min-height: 15rem; */
+  }
+
+  #what_you_learn .flex .column .icon {
+    padding-bottom: 2vw;
+    margin-bottom: 2vw;
+    border-bottom: 1px solid black;
+    width: 80%;
+    text-align: center;
+  }
+
+  #what_you_learn .flex .column .icon i {
+    /* width: 50px;
+height: 50px; */
+    font-size: 2rem;
+    background-color: #003d60;
+    color: white;
+    padding: 2.4rem;
+    border-radius: 100px;
+    text-align: center;
+    margin: auto;
+  }
+
+  #what_you_learn .flex .column p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
